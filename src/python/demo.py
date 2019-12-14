@@ -1,5 +1,6 @@
 from tkinter import *
 import triangulate
+import triangulate2
 
 points = []
 
@@ -7,7 +8,7 @@ points = []
 def left_mouse(event, canvas):
     canvas.create_oval([event.x - 2, event.y - 2, event.x + 2, event.y + 2], fill="black")
     points.append([event.x, -event.y])
-    triangulate.triangulate(points)
+    triangulate2.triangulate(points)
 
 
 def main():
