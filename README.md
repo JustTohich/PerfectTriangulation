@@ -8,3 +8,5 @@ Install other packages
 ```
 pip install scipy matplotlib numpy triangle
 ```
+
+Run demo.py
