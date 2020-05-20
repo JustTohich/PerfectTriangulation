@@ -92,8 +92,11 @@ def flip(triangulation, v1, v2, v3, v4):
         raise AttributeError
 
 
-def init(points, params='a5000'):
-    triangulation = tr.triangulate(dict(vertices=np.array(points)), params)
+def init(points, params=None):
+    if params:
+        triangulation = tr.triangulate(dict(vertices=np.array(points)), params)
+    else:
+        triangulation = tr.triangulate(dict(vertices=np.array(points)))
     triangulation[SRC_POINT_MARKERS] = [i < len(points) for i in range(len(triangulation[VERTICES]))]
     triangulation[VERTICES] = [*triangulation[VERTICES]]
     triangulation[VERTEX_MARKERS] = [*triangulation[VERTEX_MARKERS]]

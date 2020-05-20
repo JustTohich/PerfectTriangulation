@@ -22,7 +22,7 @@ def triangulate(points):
     improve_triangulation(improved_triangulation)
     ax2.set_title('Standard')
     ax1.set_title('Improved')
-    viewer.compare(ax1, improved_triangulation, ax2, triangulation)
+    viewer.compare(ax1, improved_triangulation, ax2, triangulation, points)
     weak_balance.balance_triangulation(triangulation)
     weak_balance.balance_triangulation(improved_triangulation)
     balance.balance_triangulation(triangulation)
@@ -30,7 +30,7 @@ def triangulate(points):
 
     ax4.set_title('Balanced standard')
     ax3.set_title('Balanced improved')
-    viewer.compare(ax3, improved_triangulation, ax4, triangulation)
+    viewer.compare(ax3, improved_triangulation, ax4, triangulation, points)
     plt.show()
 
 
